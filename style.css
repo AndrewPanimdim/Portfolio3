@@ -1,0 +1,188 @@
+.slide {
+    background-color: rgb(13, 26, 54);
+    width: 100%;
+    height: 350%;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.webdev  {
+    width:100%;
+    position:fixed;
+    text-align: center;
+    top: 35%;
+    font-size: clamp(1.5rem, calc(2vw + 2rem), 6rem);
+}
+
+.sapp { /*ano to?*/
+    width:100%;
+    position:fixed;
+    text-align: center;
+    top: 50%;
+    font-size: clamp(2rem, 1vw, 5rem);
+}
+
+
+.topnav {
+    width: 100%;
+    height: 9%;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    display: flex;
+    align-items: center;   
+    transition: top 0.6s ease;
+    z-index: 2;
+}
+
+.name {
+    font-size: clamp(1.2rem, 0.5vw, 3rem);
+    padding: 0 1rem;
+
+}
+
+.navbutContainer {
+    position: absolute;
+    right: 0%;
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+    margin-right: 1rem; /* adds space from the right edge */
+    margin-left: 1rem;
+}
+
+.home, .about, .connect {
+  opacity: 1;
+}
+
+.contact {
+    background-color: rgb(210, 209, 209);
+    position: absolute;
+    bottom: -4%;
+    width: 100%;
+    height: 4%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    font-size: clamp(0.5rem, calc(1rem + 1vw), 4rem);
+    flex-wrap: wrap; /* allow wrap on smaller screens */
+}
+
+.contact div {
+    flex-grow: 1;
+    transition: background-color 0.3s, color 0.3s, flex-grow 0.6s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact div a {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.contact div:hover {
+    background-color: rgb(27, 26, 26);
+    color: white;
+    flex-grow: 10;
+}
+
+.contact div:hover a {
+    opacity: 1;
+}
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20vw;
+    font-size: clamp(1.5rem, 1vh, 3rem);
+    color: orange;
+}
+
+.Projects div {
+    text-align: center;
+    transition: 
+        text-shadow 0.5s cubic-bezier(0.4,0,0.2,1),
+        transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    cursor: pointer;
+}
+
+.Projects div:hover {
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    transform: scale(2);
+
+}
+
+.Projects div a {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.Projects div:hover a {
+    opacity: 1;
+}
+ 
+#project {
+    position: absolute;
+    top: 3%;
+    font-size: clamp(2rem, calc(3.5vw + 9rem), 3rem);
+    color: orange;
+    opacity: 0; 
+    transform: translateX(-60%); 
+}
+
+.slideLeft {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+      from { transform: translateX(-60%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+
+@media (max-width: 768px) {
+    .navbutContainer {
+        opacity: 0;
+    }
+
+    .Projects div:hover {
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    transform: scale(1.1);
+    }
+
+    
+} 
+
+@media (max-width: 380px) {
+    .Projects div:hover {
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    transform: scale(1.2);
+    }
+
+    .project {
+        font-size: 1px;
+    }
+
+    .slide {
+        height: 400%;
+    }
+}
