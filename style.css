@@ -11,13 +11,25 @@
     flex-direction: column;
 }
 
-.webdev  {
-    width:100%;
-    position:fixed;
+.webdev {
+    width: 100%;
+    position: fixed;
     text-align: center;
     top: 35%;
     font-size: clamp(1.5rem, calc(2vw + 2rem), 6rem);
+    letter-spacing: 0.05em;
 }
+
+.webdev span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.webdev span:hover {
+    transform: scale(1.6);
+}
+
+
 
 .sapp { /*ano to?*/
     width:100%;
@@ -44,7 +56,16 @@
 .name {
     font-size: clamp(1.2rem, 0.5vw, 3rem);
     padding: 0 1rem;
+}
 
+.name span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.name span:hover {
+    transform: scale(1.6);
+    color: orange;
 }
 
 .navbutContainer {
