@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover Image Reveal</title>
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hover-image {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-container:hover .hover-image {
+      display: block;
+    }
+
+    .main-image {
+      width: 300px;
+      height: 200px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="main.jpg" alt="Main Image" class="main-image">
+  <img src="hover.jpg" alt="Hover Image" class="hover-image">
+</div>
+
+</body>
+</html>

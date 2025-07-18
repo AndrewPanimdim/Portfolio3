@@ -129,7 +129,7 @@
 
 .Projects {
     position: absolute;
-    top:19%;
+    top:22%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,7 +218,7 @@
 
 .block {
     position: absolute;
-    top:-10%;
+    top:-16%;
     font-size: clamp(2rem, calc(3.5vw + 9rem), 3rem);
     z-index: 2;
     color: white;
